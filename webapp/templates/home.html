@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Считаем</title>
+</head>
+<body>
+
+<center><h1 style="margin-top: 100px">Делаем Подсчеты!</h1></center>
+
+<center>
+<span>Число А:</span>
+<br>
+<input type="text" placeholder="Считаем..." style="font-size: 15px; border: solid 2px; border-radius: 10px" id="a">
+<br>
+<br>
+<span>Число B:</span>
+<br>
+<input type="text" placeholder="Считаем..." style="font-size: 15px; border: solid 2px; border-radius: 10px" id="b">
+</center>
+
+<center style="margin-top: 40px">
+<a href="{% url 'count_api1:add' %}" style="text-decoration: none; color: black">add - сложить</a>
+<br>
+<br>
+<a href="{% url 'count_api1:subtract' %}" style="text-decoration: none; color: black">subtract - вычесть</a>
+<br>
+<br>
+<a href="{% url 'count_api1:divide' %}" style="text-decoration: none; color: black">divide - разделить</a>
+<br>
+<br>
+<a href="{% url 'count_api1:multiply' %}" style="text-decoration: none; color: black">multiply - умножить</a>
+</center>
+<br>
+<center>
+    <div id="answer">
+        
+    </div>
+</center>
+
+<script src="{% static 'js/calculiruem.js' %}"></script>
+</body>
+</html>
